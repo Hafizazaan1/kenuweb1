@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KenuColor - Quality Colors</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- LANGUAGE SCREEN -->
+<div id="languageScreen" class="language-screen">
+
+    <div class="language-box">
+
+        <div class="language-logo">
+            <span class="logo-color">Kenu</span><span>Color</span>
+        </div>
+
+        <h1>Welcome to KenuColor</h1>
+
+        <p>Choose your preferred language</p>
+
+        <div class="language-buttons">
+
+            <button onclick="selectLanguage('en')" class="language-btn english">
+                English
+            </button>
+
+            <button onclick="selectLanguage('ur')" class="language-btn urdu">
+                اردو
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN WEBSITE -->
+<div id="mainWebsite" class="hidden">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span>Kenu</span>Color
+            </a>
+
+            <nav id="navMenu">
+
+                <a href="#home" data-en="Home" data-ur="ہوم">Home</a>
+
+                <a href="#products" data-en="Products" data-ur="پروڈکٹس">
+                    Products
+                </a>
+
+                <a href="#about" data-en="About Us" data-ur="ہمارے بارے میں">
+                    About Us
+                </a>
+
+                <a href="#reviews" data-en="Reviews" data-ur="ریویوز">
+                    Reviews
+                </a>
+
+                <a href="#contact" data-en="Contact" data-ur="رابطہ">
+                    Contact
+                </a>
+
+            </nav>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="badge" data-en="Premium Quality Colors" data-ur="اعلیٰ معیار کے رنگ">
+                    Premium Quality Colors
+                </span>
+
+                <h1
+                    data-en="Bring Your World to Life With Color"
+                    data-ur="رنگوں کے ساتھ اپنی دنیا کو خوبصورت بنائیں">
+                    Bring Your World to Life With Color
+                </h1>
+
+                <p
+                    data-en="Discover premium quality paints and colors made for beautiful homes, businesses and every creative project."
+                    data-ur="اعلیٰ معیار کے پینٹس اور رنگ دریافت کریں جو گھروں، کاروبار اور ہر تخلیقی منصوبے کے لیے بنائے گئے ہیں۔">
+                    Discover premium quality paints and colors made for beautiful homes, businesses and every creative project.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#products" class="btn primary-btn"
+                       data-en="Explore Products"
+                       data-ur="پروڈکٹس دیکھیں">
+                        Explore Products
+                    </a>
+
+                    <a href="#distributor" class="btn outline-btn"
+                       data-en="Become a Distributor"
+                       data-ur="ڈسٹری بیوٹر بنیں">
+                        Become a Distributor
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="container feature-grid">
+
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3 data-en="Beautiful Colors" data-ur="خوبصورت رنگ">
+                    Beautiful Colors
+                </h3>
+                <p data-en="A wide range of colors for every project."
+                   data-ur="ہر منصوبے کے لیے رنگوں کی وسیع رینج۔">
+                    A wide range of colors for every project.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⭐</div>
+                <h3 data-en="Premium Quality" data-ur="اعلیٰ معیار">
+                    Premium Quality
+                </h3>
+                <p data-en="Quality products you can trust."
+                   data-ur="قابل اعتماد معیاری مصنوعات۔">
+                    Quality products you can trust.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🚚</div>
+                <h3 data-en="Distributor Network" data-ur="ڈسٹری بیوٹر نیٹ ورک">
+                    Distributor Network
+                </h3>
+                <p data-en="Grow your business with KenuColor."
+                   data-ur="KenuColor کے ساتھ اپنا کاروبار بڑھائیں۔">
+                    Grow your business with KenuColor.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="products" class="products-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label"
+                      data-en="OUR PRODUCTS"
+                      data-ur="ہماری مصنوعات">
+                    OUR PRODUCTS
+                </span>
+
+                <h2 data-en="Explore KenuColor Products"
+                    data-ur="KenuColor کی مصنوعات دیکھیں">
+                    Explore KenuColor Products
+                </h2>
+
+                <p data-en="Choose the right color product for your project."
+                   data-ur="اپنے منصوبے کے لیے بہترین رنگ منتخب کریں۔">
+                    Choose the right color product for your project.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="product-tools">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search products..."
+                    oninput="searchProducts()"
+                >
+
+                <button class="add-product-btn" onclick="openAddProduct()">
+                    + <span data-en="Add Product" data-ur="پروڈکٹ شامل کریں">
+                        Add Product
+                    </span>
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTS GRID -->
+            <div id="productsGrid" class="products-grid"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <div class="paint-circle circle-1"></div>
+                <div class="paint-circle circle-2"></div>
+                <div class="paint-circle circle-3"></div>
+
+                <div class="about-logo">
+                    Kenu<span>Color</span>
+                </div>
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-label"
+                      data-en="ABOUT KENUCOLOR"
+                      data-ur="KenuColor کے بارے میں">
+                    ABOUT KENUCOLOR
+                </span>
+
+                <h2
+                    data-en="Colors That Make Every Space Beautiful"
+                    data-ur="وہ رنگ جو ہر جگہ کو خوبصورت بنائیں">
+                    Colors That Make Every Space Beautiful
+                </h2>
+
+                <p
+                    data-en="KenuColor is committed to providing quality colors and paint products for homes, offices, shops and commercial projects."
+                    data-ur="KenuColor گھروں، دفاتر، دکانوں اور کمرشل منصوبوں کے لیے معیاری رنگ اور پینٹ مصنوعات فراہم کرنے کے لیے پرعزم ہے۔">
+                    KenuColor is committed to providing quality colors and paint products for homes, offices, shops and commercial projects.
+                </p>
+
+                <p
+                    data-en="Our goal is simple: beautiful colors, reliable quality and excellent service."
+                    data-ur="ہمارا مقصد آسان ہے: خوبصورت رنگ، قابل اعتماد معیار اور بہترین سروس۔">
+                    Our goal is simple: beautiful colors, reliable quality and excellent service.
+                </p>
+
+                <div class="stats">
+
+                    <div>
+                        <strong>100+</strong>
+                        <span data-en="Colors" data-ur="رنگ">Colors</span>
+                    </div>
+
+                    <div>
+                        <strong>50+</strong>
+                        <span data-en="Products" data-ur="مصنوعات">Products</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span data-en="Support" data-ur="مدد">Support</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISTRIBUTOR -->
+    <section id="distributor" class="distributor-section">
+
+        <div class="container distributor-box">
+
+            <div>
+
+                <span class="section-label light"
+                      data-en="BUSINESS OPPORTUNITY"
+                      data-ur="کاروباری موقع">
+                    BUSINESS OPPORTUNITY
+                </span>
+
+                <h2
+                    data-en="Become a KenuColor Distributor"
+                    data-ur="KenuColor کے ڈسٹری بیوٹر بنیں">
+                    Become a KenuColor Distributor
+                </h2>
+
+                <p
+                    data-en="Join our growing network and build your business with KenuColor products."
+                    data-ur="ہمارے بڑھتے ہوئے نیٹ ورک میں شامل ہوں اور KenuColor مصنوعات کے ساتھ اپنا کاروبار بڑھائیں۔">
+                    Join our growing network and build your business with KenuColor products.
+                </p>
+
+            </div>
+
+            <button class="whatsapp-btn" onclick="applyDistributor()">
+
+                <span>💬</span>
+
+                <span
+                    data-en="Apply for Distributor"
+                    data-ur="ڈسٹری بیوٹر کے لیے اپلائی کریں">
+                    Apply for Distributor
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label"
+                      data-en="CUSTOMER REVIEWS"
+                      data-ur="صارفین کے ریویوز">
+                    CUSTOMER REVIEWS
+                </span>
+
+                <h2 data-en="What Our Customers Say"
+                    data-ur="ہمارے صارفین کیا کہتے ہیں">
+                    What Our Customers Say
+                </h2>
+
+            </div>
+
+            <div class="reviews-grid">
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Excellent color quality and beautiful finish. Very happy with the product."
+                    </p>
+
+                    <div class="review-person">
+                        <div class="avatar">A</div>
+                        <div>
+                            <strong>Ahmed</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The colors are very attractive and the quality is impressive. Recommended."
+                    </p>
+
+                    <div class="review-person">
+                        <div class="avatar">M</div>
+                        <div>
+                            <strong>Muhammad</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Great products and very professional service. KenuColor is a good choice."
+                    </p>
+
+                    <div class="review-person">
+                        <div class="avatar">S</div>
+                        <div>
+                            <strong>Saad</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+
+        <div class="container contact-grid">
+
+            <div>
+
+                <span class="section-label"
+                      data-en="CONTACT US"
+                      data-ur="رابطہ کریں">
+                    CONTACT US
+                </span>
+
+                <h2 data-en="Let's Talk"
+                    data-ur="ہم سے رابطہ کریں">
+                    Let's Talk
+                </h2>
+
+                <p data-en="Have a question about our products or distribution? Contact us on WhatsApp."
+                   data-ur="ہماری مصنوعات یا ڈسٹری بیوشن کے بارے میں سوال ہے؟ WhatsApp پر رابطہ کریں۔">
+                    Have a question about our products or distribution? Contact us on WhatsApp.
+                </p>
+
+                <button class="contact-whatsapp" onclick="openWhatsApp()">
+                    💬 WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="footer-logo">
+                <span>Kenu</span>Color
+            </div>
+
+            <p>
+                © 2026 KenuColor. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+<!-- PRODUCT DETAILS MODAL -->
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeProductModal()">×</button>
+
+        <div id="modalProductContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ADD PRODUCT MODAL -->
+<div id="addProductModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeAddProduct()">×</button>
+
+        <h2>Add Product</h2>
+
+        <div class="form-group">
+            <label>Product Name</label>
+            <input id="newProductName" type="text" placeholder="Product name">
+        </div>
+
+        <div class="form-group">
+            <label>Category</label>
+            <input id="newProductCategory" type="text" placeholder="Interior / Exterior">
+        </div>
+
+        <div class="form-group">
+            <label>Color</label>
+            <input id="newProductColor" type="color" value="#ff5a36">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="newProductDescription" placeholder="Product description"></textarea>
+        </div>
+
+        <button class="btn primary-btn full-btn" onclick="addProduct()">
+            Add Product
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- WHATSAPP FLOAT -->
+<button class="whatsapp-float" onclick="openWhatsApp()">
+    💬
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
