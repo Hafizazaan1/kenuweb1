@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KenuColor - Professional Hair Color</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- LANGUAGE SCREEN -->
+    <div id="languageScreen" class="language-screen">
+        <div class="language-box">
+
+            <div class="language-logo">
+                <span>Kenu</span>Color
+            </div>
+
+            <h1>Welcome to KenuColor</h1>
+            <p>Choose your preferred language</p>
+
+            <div class="language-buttons">
+                <button onclick="selectLanguage('en')" class="language-btn english">
+                    English
+                </button>
+
+                <button onclick="selectLanguage('ur')" class="language-btn urdu">
+                    اردو
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MAIN WEBSITE -->
+    <div id="mainWebsite" class="hidden">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="container nav-container">
+
+                <a href="#home" class="logo">
+                    <span>Kenu</span>Color
+                </a>
+
+                <nav id="navMenu">
+                    <a href="#home" data-en="Home" data-ur="ہوم">Home</a>
+                    <a href="#products" data-en="Hair Colors" data-ur="ہیئر کلرز">Hair Colors</a>
+                    <a href="#about" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
+                    <a href="#reviews" data-en="Reviews" data-ur="ریویوز">Reviews</a>
+                    <a href="#contact" data-en="Contact" data-ur="رابطہ">Contact</a>
+                </nav>
+
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            </div>
+        </header>
+
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+
+                    <span class="badge"
+                        data-en="PREMIUM PROFESSIONAL HAIR COLOR"
+                        data-ur="پریمیم پروفیشنل ہیئر کلر">
+                        PREMIUM PROFESSIONAL HAIR COLOR
+                    </span>
+
+                    <h1
+                        data-en="Express Yourself With Beautiful Hair Color"
+                        data-ur="خوبصورت ہیئر کلر کے ساتھ اپنا انداز بنائیں">
+                        Express Yourself With Beautiful Hair Color
+                    </h1>
+
+                    <p
+                        data-en="Discover beautiful hair color shades designed for confident, vibrant and long-lasting looks."
+                        data-ur="خوبصورت اور دلکش ہیئر کلر شیڈز دریافت کریں جو دیرپا اور بہترین لک کے لیے بنائے گئے ہیں۔">
+                        Discover beautiful hair color shades designed for confident, vibrant and long-lasting looks.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#products" class="btn primary-btn"
+                            data-en="Explore Shades"
+                            data-ur="شیڈز دیکھیں">
+                            Explore Shades
+                        </a>
+
+                        <a href="#distributor" class="btn outline-btn"
+                            data-en="Become a Distributor"
+                            data-ur="ڈسٹری بیوٹر بنیں">
+                            Become a Distributor
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features">
+            <div class="container feature-grid">
+
+                <div class="feature">
+                    <div class="feature-icon">💇</div>
+
+                    <h3 data-en="Rich Hair Shades" data-ur="خوبصورت شیڈز">
+                        Rich Hair Shades
+                    </h3>
+
+                    <p data-en="A beautiful range of shades for every style."
+                        data-ur="ہر انداز کے لیے خوبصورت شیڈز کی رینج۔">
+                        A beautiful range of shades for every style.
+                    </p>
+                </div>
+
+
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+
+                    <h3 data-en="Premium Quality" data-ur="اعلیٰ معیار">
+                        Premium Quality
+                    </h3>
+
+                    <p data-en="Beautiful color performance for a confident look."
+                        data-ur="بہترین لک کے لیے خوبصورت کلر پرفارمنس۔">
+                        Beautiful color performance for a confident look.
+                    </p>
+                </div>
+
+
+                <div class="feature">
+                    <div class="feature-icon">👑</div>
+
+                    <h3 data-en="Professional Collection" data-ur="پروفیشنل کلیکشن">
+                        Professional Collection
+                    </h3>
+
+                    <p data-en="Hair color shades made for every personality."
+                        data-ur="ہر شخصیت کے لیے بہترین ہیئر کلر شیڈز۔">
+                        Hair color shades made for every personality.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section id="products" class="products-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label"
+                        data-en="OUR HAIR COLORS"
+                        data-ur="ہمارے ہیئر کلرز">
+                        OUR HAIR COLORS
+                    </span>
+
+                    <h2
+                        data-en="Find Your Perfect Shade"
+                        data-ur="اپنا بہترین شیڈ منتخب کریں">
+                        Find Your Perfect Shade
+                    </h2>
+
+                    <p
+                        data-en="Explore our collection and choose a shade that matches your style."
+                        data-ur="اپنے انداز کے مطابق بہترین ہیئر کلر شیڈ منتخب کریں۔">
+                        Explore our collection and choose a shade that matches your style.
+                    </p>
+
+                </div>
+
+
+                <div class="product-tools">
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Search hair colors..."
+                        oninput="searchProducts()"
+                    >
+                </div>
+
+
+                <div id="productsGrid" class="products-grid"></div>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+                    <div class="hair-visual">
+
+                        <span class="hair-visual-label">
+                            PROFESSIONAL
+                        </span>
+
+                        <strong>
+                            KENU<br>
+                            <em>COLOR</em>
+                        </strong>
+
+                        <span class="hair-visual-sub">
+                            HAIR COLOR COLLECTION
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-label"
+                        data-en="ABOUT KENUCOLOR"
+                        data-ur="کینو کلر کے بارے میں">
+                        ABOUT KENUCOLOR
+                    </span>
+
+                    <h2
+                        data-en="Color That Lets Your Hair Speak"
+                        data-ur="ایسا رنگ جو آپ کے بالوں کو نمایاں بنائے">
+                        Color That Lets Your Hair Speak
+                    </h2>
+
+                    <p
+                        data-en="KenuColor is dedicated to beautiful and expressive hair color shades for everyday style and professional salon looks."
+                        data-ur="KenuColor خوبصورت اور دلکش ہیئر کلر شیڈز فراہم کرنے کے لیے بنایا گیا ہے۔">
+                        KenuColor is dedicated to beautiful and expressive hair color shades for everyday style and professional salon looks.
+                    </p>
+
+                    <p
+                        data-en="Our goal is simple: rich shades, beautiful results and confident style."
+                        data-ur="ہمارا مقصد خوبصورت شیڈز، بہترین نتائج اور پراعتماد انداز فراہم کرنا ہے۔">
+                        Our goal is simple: rich shades, beautiful results and confident style.
+                    </p>
+
+
+                    <div class="stats">
+
+                        <div>
+                            <strong>100+</strong>
+                            <span data-en="Shades" data-ur="شیڈز">Shades</span>
+                        </div>
+
+                        <div>
+                            <strong>50+</strong>
+                            <span data-en="Products" data-ur="پروڈکٹس">Products</span>
+                        </div>
+
+                        <div>
+                            <strong>24/7</strong>
+                            <span data-en="Support" data-ur="مدد">Support</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DISTRIBUTOR -->
+        <section id="distributor" class="distributor-section">
+
+            <div class="container distributor-box">
+
+                <div>
+
+                    <span class="section-label light"
+                        data-en="BUSINESS OPPORTUNITY"
+                        data-ur="کاروباری موقع">
+                        BUSINESS OPPORTUNITY
+                    </span>
+
+                    <h2
+                        data-en="Grow With KenuColor"
+                        data-ur="KenuColor کے ساتھ ترقی کریں">
+                        Grow With KenuColor
+                    </h2>
+
+                    <p
+                        data-en="Join our growing network and bring beautiful KenuColor hair shades to more customers."
+                        data-ur="ہمارے نیٹ ورک میں شامل ہوں اور KenuColor ہیئر کلرز کو مزید لوگوں تک پہنچائیں۔">
+                        Join our growing network and bring beautiful KenuColor hair shades to more customers.
+                    </p>
+
+                </div>
+
+                <button class="whatsapp-btn" onclick="applyDistributor()">
+                    💬
+                    <span
+                        data-en="Apply for Distributor"
+                        data-ur="ڈسٹری بیوٹر کے لیے اپلائی کریں">
+                        Apply for Distributor
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="reviews-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label"
+                        data-en="CUSTOMER REVIEWS"
+                        data-ur="صارفین کے ریویوز">
+                        CUSTOMER REVIEWS
+                    </span>
+
+                    <h2
+                        data-en="What Our Customers Say"
+                        data-ur="ہمارے صارفین کیا کہتے ہیں">
+                        What Our Customers Say
+                    </h2>
+                </div>
+
+
+                <div class="reviews-grid">
+
+                    <div class="review-card">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "Beautiful shade and a smooth-looking finish. I loved the final hair color."
+                        </p>
+
+                        <div class="review-person">
+                            <div class="avatar">A</div>
+
+                            <div>
+                                <strong>Ahmed</strong>
+                                <span>Customer</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-card">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "The shade looked rich and vibrant. A great choice for a fresh new look."
+                        </p>
+
+                        <div class="review-person">
+                            <div class="avatar">M</div>
+
+                            <div>
+                                <strong>Muhammad</strong>
+                                <span>Customer</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-card">
+
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "Lovely color range and a premium experience. KenuColor is a great choice."
+                        </p>
+
+                        <div class="review-person">
+                            <div class="avatar">S</div>
+
+                            <div>
+                                <strong>Saad</strong>
+                                <span>Customer</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+
+            <div class="container contact-grid">
+
+                <div>
+
+                    <span class="section-label"
+                        data-en="CONTACT US"
+                        data-ur="رابطہ کریں">
+                        CONTACT US
+                    </span>
+
+                    <h2
+                        data-en="Let's Talk"
+                        data-ur="ہم سے رابطہ کریں">
+                        Let's Talk
+                    </h2>
+
+                    <p
+                        data-en="Have a question about our hair colors or distribution? Contact us on WhatsApp."
+                        data-ur="ہمارے ہیئر کلرز یا ڈسٹری بیوشن کے بارے میں سوال ہے؟ WhatsApp پر رابطہ کریں۔">
+                        Have a question about our hair colors or distribution? Contact us on WhatsApp.
+                    </p>
+
+                    <button class="contact-whatsapp" onclick="openWhatsApp()">
+                        💬 WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="container footer-content">
+
+                <div class="footer-logo">
+                    <span>Kenu</span>Color
+                </div>
+
+                <p>
+                    © 2026 KenuColor. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" onclick="closeProductModal()">
+                ×
+            </button>
+
+            <div id="modalProductContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHATSAPP FLOAT -->
+    <button class="whatsapp-float" onclick="openWhatsApp()">
+        💬
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
