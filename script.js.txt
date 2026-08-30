@@ -1,0 +1,285 @@
+const WHATSAPP_NUMBER = "923160899978";
+
+let currentLanguage = "en";
+
+let products = [
+    {
+        id: 1,
+        name: "Natural Black",
+        category: "Classic Shade",
+        color: "#111111",
+        rating: 5,
+        description: "A deep and rich black shade for a bold and timeless look."
+    },
+    {
+        id: 2,
+        name: "Dark Brown",
+        category: "Natural Collection",
+        color: "#3A2A23",
+        rating: 5,
+        description: "A sophisticated dark brown shade with natural-looking depth."
+    },
+    {
+        id: 3,
+        name: "Warm Chocolate",
+        category: "Brown Collection",
+        color: "#6A4635",
+        rating: 4.9,
+        description: "A warm chocolate-inspired shade for a soft and elegant transformation."
+    },
+    {
+        id: 4,
+        name: "Burgundy",
+        category: "Fashion Shade",
+        color: "#4B101C",
+        rating: 5,
+        description: "A rich burgundy shade for confident and expressive style."
+    },
+    {
+        id: 5,
+        name: "Golden Blonde",
+        category: "Light Collection",
+        color: "#B59A61",
+        rating: 4.8,
+        description: "A luminous golden blonde shade for a bright and beautiful look."
+    },
+    {
+        id: 6,
+        name: "Copper Red",
+        category: "Fashion Shade",
+        color: "#9A4328",
+        rating: 5,
+        description: "A vibrant copper red shade with warm and eye-catching character."
+    }
+];
+
+
+/* LANGUAGE */
+
+function selectLanguage(language) {
+    currentLanguage = language;
+
+    document
+        .getElementById("languageScreen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("mainWebsite")
+        .classList.remove("hidden");
+
+    renderProducts();
+}
+
+
+/* RENDER PRODUCTS */
+
+function renderProducts(list = products) {
+
+    const grid =
+        document.getElementById("productsGrid");
+
+    grid.innerHTML = "";
+
+    if (list.length === 0) {
+        grid.innerHTML = `
+            <p style="grid-column: 1 / -1; text-align:center;">
+                No hair colors found.
+            </p>
+        `;
+
+        return;
+    }
+
+    list.forEach(product => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+
+            <div
+                class="product-color"
+                style="background:${product.color}">
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    ${product.category}
+                </span>
+
+                <h3>${product.name}</h3>
+
+                <p>${product.description}</p>
+
+                <div class="product-bottom">
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        ${product.rating}
+                    </div>
+
+                    <button
+                        class="view-btn"
+                        onclick="openProduct(${product.id})">
+
+                        <i class="fa-solid fa-eye"></i>
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+
+        grid.appendChild(card);
+
+    });
+}
+
+
+/* SEARCH */
+
+function searchProducts() {
+
+    const search =
+        document
+            .getElementById("productSearch")
+            .value
+            .toLowerCase();
+
+    const filtered =
+        products.filter(product =>
+            product.name.toLowerCase().includes(search) ||
+            product.category.toLowerCase().includes(search)
+        );
+
+    renderProducts(filtered);
+}
+
+
+/* OPEN PRODUCT */
+
+function openProduct(id) {
+
+    const product =
+        products.find(item => item.id === id);
+
+    if (!product) return;
+
+    const modal =
+        document.getElementById("productModal");
+
+    const content =
+        document.getElementById("modalProductContent");
+
+    content.innerHTML = `
+
+        <div
+            class="modal-product-color"
+            style="background:${product.color}">
+        </div>
+
+        <span class="product-category">
+            ${product.category}
+        </span>
+
+        <h2>${product.name}</h2>
+
+        <div class="rating" style="margin:15px 0;">
+            <i class="fa-solid fa-star"></i>
+            ${product.rating}
+        </div>
+
+        <p>${product.description}</p>
+
+        <br>
+
+        <button
+            class="whatsapp-btn"
+            onclick="applyForProduct('${product.name}')">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Get More Information
+
+        </button>
+    `;
+
+    modal.classList.add("show");
+}
+
+
+/* CLOSE PRODUCT */
+
+function closeProductModal() {
+
+    document
+        .getElementById("productModal")
+        .classList.remove("show");
+
+}
+
+
+/* DISTRIBUTOR */
+
+function applyDistributor() {
+
+    const message =
+        "Hello KenuColor, I am interested in becoming a distributor. Please provide me with more information.";
+
+    openWhatsApp(message);
+}
+
+
+/* PRODUCT WHATSAPP */
+
+function applyForProduct(productName) {
+
+    const message =
+        `Hello KenuColor, I would like more information about the "${productName}" hair color.`;
+
+    openWhatsApp(message);
+}
+
+
+/* WHATSAPP */
+
+function openWhatsApp(customMessage = null) {
+
+    const message =
+        customMessage ||
+        "Hello KenuColor, I would like more information about your hair colors.";
+
+    const url =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+}
+
+
+/* MOBILE MENU */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navMenu")
+        .classList.toggle("open");
+
+}
+
+
+/* CLOSE MODAL OUTSIDE */
+
+window.addEventListener("click", function(event) {
+
+    const modal =
+        document.getElementById("productModal");
+
+    if (event.target === modal) {
+        closeProductModal();
+    }
+
+});
