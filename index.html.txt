@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KEUNE | Professional Hair Color</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+/* ================================
+   GLOBAL
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+:root{
+    --black:#111111;
+    --dark:#1d1d1d;
+    --white:#ffffff;
+    --gray:#777777;
+    --light:#f4f4f4;
+    --border:#dddddd;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+header{
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+.logo span{
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#ddd;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    min-height:650px;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),
+    url("tinta-color.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:700px;
+}
+
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    border:1px solid #777;
+
+    padding:10px 18px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:300;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 24px;
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-dark{
+    background:white;
+    color:black;
+}
+
+.btn-dark:hover{
+    background:#ddd;
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features{
+    background:white;
+    padding:70px 0;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.feature{
+    text-align:center;
+    padding:35px 25px;
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.feature h3{
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.feature p{
+    color:#777;
+    line-height:1.7;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title span{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#777;
+}
+
+.section-title h2{
+    font-size:45px;
+    font-weight:300;
+    margin-top:15px;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:15px;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box{
+    max-width:600px;
+    margin:0 auto 45px;
+    position:relative;
+}
+
+.search-box i{
+    position:absolute;
+    left:18px;
+    top:17px;
+    color:#777;
+}
+
+.search-box input{
+    width:100%;
+    padding:17px 20px 17px 50px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+
+/* ================================
+   PRODUCTS
+================================ */
+
+.products{
+    background:#f4f4f4;
+}
+
+.products-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+.product-card{
+    background:white;
+
+    transition:.3s;
+
+    overflow:hidden;
+}
+
+.product-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+}
+
+.product-image{
+    height:310px;
+
+    background:#eeeeee;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    padding:15px;
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-category{
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#888;
+
+    text-transform:uppercase;
+}
+
+.product-info h3{
+    font-size:21px;
+
+    margin:10px 0;
+}
+
+.product-info p{
+    color:#777;
+
+    line-height:1.6;
+
+    font-size:14px;
+}
+
+.product-bottom{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:22px;
+}
+
+.product-code{
+    color:#555;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+.view-btn{
+    background:#111;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    cursor:pointer;
+}
+
+.view-btn:hover{
+    background:#444;
+}
+
+
+/* ================================
+   SHADE COLORS
+================================ */
+
+.shade-black{
+    background:linear-gradient(135deg,#111,#444);
+}
+
+.shade-brown{
+    background:linear-gradient(135deg,#25150e,#70452f);
+}
+
+.shade-lightbrown{
+    background:linear-gradient(135deg,#8a5a3b,#c7966c);
+}
+
+.shade-blonde{
+    background:linear-gradient(135deg,#c99b51,#f0d39b);
+}
+
+.shade-red{
+    background:linear-gradient(135deg,#4c0c0c,#b23a3a);
+}
+
+.shade-violet{
+    background:linear-gradient(135deg,#280d31,#7b3f89);
+}
+
+.shade-blue{
+    background:linear-gradient(135deg,#071624,#205274);
+}
+
+
+/* ================================
+   PRODUCT COLOR PREVIEW
+================================ */
+
+.color-product{
+    height:310px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.color-product img{
+    width:70%;
+
+    height:90%;
+
+    object-fit:contain;
+
+    position:relative;
+
+    z-index:2;
+
+    filter:drop-shadow(0 15px 15px rgba(0,0,0,.25));
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-image{
+    height:500px;
+
+    background:#151515;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.about-image img{
+    width:90%;
+
+    height:90%;
+
+    object-fit:contain;
+}
+
+.about-content span{
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    color:#777;
+}
+
+.about-content h2{
+    font-size:45px;
+
+    font-weight:300;
+
+    margin:20px 0;
+}
+
+.about-content p{
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+}
+
+.stats{
+    display:flex;
+
+    gap:45px;
+
+    margin-top:30px;
+}
+
+.stats strong{
+    display:block;
+
+    font-size:30px;
+}
+
+.stats small{
+    color:#777;
+}
+
+
+/* ================================
+   DISTRIBUTOR
+================================ */
+
+.distributor{
+    background:#111;
+
+    color:white;
+
+    padding:90px 0;
+}
+
+.distributor-box{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+}
+
+.distributor h2{
+    font-size:45px;
+
+    font-weight:300;
+
+    margin:15px 0;
+}
+
+.distributor p{
+    color:#bbb;
+
+    max-width:650px;
+
+    line-height:1.8;
+}
+
+.whatsapp-btn{
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:16px 25px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+}
+
+.whatsapp-btn i{
+    margin-right:8px;
+}
+
+
+/* ================================
+   REVIEWS
+================================ */
+
+.reviews{
+    background:#f4f4f4;
+}
+
+.reviews-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.review{
+    background:white;
+
+    padding:30px;
+}
+
+.review-stars{
+    margin-bottom:18px;
+
+    color:#111;
+}
+
+.review p{
+    color:#666;
+
+    line-height:1.8;
+}
+
+.review-user{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.user-icon{
+    width:45px;
+
+    height:45px;
+
+    background:#111;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+}
+
+.review-user small{
+    display:block;
+
+    color:#888;
+
+    margin-top:4px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact{
+    background:white;
+
+    text-align:center;
+
+    padding:100px 0;
+}
+
+.contact h2{
+    font-size:45px;
+
+    font-weight:300;
+
+    margin:15px 0;
+}
+
+.contact p{
+    color:#777;
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+}
+
+.contact-btn{
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:#111;
+
+    color:white;
+
+    padding:16px 25px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+}
+
+.contact-btn i{
+    margin-right:8px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#0d0d0d;
+
+    color:#aaa;
+
+    padding:35px 0;
+}
+
+.footer-content{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-logo{
+    color:white;
+
+    font-size:25px;
+
+    letter-spacing:2px;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.modal{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:5000;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    background:white;
+
+    width:min(600px,100%);
+
+    padding:35px;
+
+    position:relative;
+}
+
+.close-modal{
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    background:#eee;
+
+    cursor:pointer;
+}
+
+.modal-image{
+    height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f2f2f2;
+
+    margin-bottom:25px;
+}
+
+.modal-image img{
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+}
+
+.modal-box h2{
+    margin-bottom:15px;
+}
+
+.modal-box p{
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+
+/* ================================
+   WHATSAPP FLOAT
+================================ */
+
+.whatsapp-float{
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#111;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    z-index:3000;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        right:0;
+
+        background:#111;
+
+        flex-direction:column;
+
+        padding:25px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .feature-grid,
+    .products-grid,
+    .reviews-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .distributor-box,
+    .footer-content{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .about-image{
+        height:380px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .section-title h2,
+    .about-content h2,
+    .distributor h2,
+    .contact h2{
+        font-size:34px;
+    }
+
+    .stats{
+        gap:20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+<span>KEU</span>NE
+</a>
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+
+<a href="#products">Hair Colors</a>
+
+<a href="#about">About</a>
+
+<a href="#distributor">Distributor</a>
+
+<a href="#reviews">Reviews</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-tag">
+<i class="fa-solid fa-sparkles"></i>
+PROFESSIONAL HAIR COLOR
+</div>
+
+<h1>
+Color Is More Than a Shade.
+</h1>
+
+<p>
+Discover professional hair color shades designed
+for beautiful results, creative expression and
+confident salon looks.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn btn-dark">
+
+<i class="fa-solid fa-palette"></i>
+
+Explore Colors
+
+</a>
+
+<a href="#distributor" class="btn btn-outline">
+
+<i class="fa-solid fa-handshake"></i>
+
+Become a Distributor
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+<div class="container feature-grid">
+
+<div class="feature">
+
+<div class="feature-icon">
+<i class="fa-solid fa-palette"></i>
+</div>
+
+<h3>Professional Shades</h3>
+
+<p>
+Explore a wide selection of hair color shades
+for different styles and looks.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+<i class="fa-solid fa-gem"></i>
+</div>
+
+<h3>Premium Collection</h3>
+
+<p>
+Professional color products designed for
+creative and salon-focused results.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+</div>
+
+<h3>Creative Expression</h3>
+
+<p>
+From natural tones to bold colors,
+find the shade that suits your style.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="section products" id="products">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>KEUNE COLOR COLLECTION</span>
+
+<h2>Find Your Perfect Shade</h2>
+
+<p>
+Explore professional color shades and developers.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="search"
+placeholder="Search products or shades..."
+oninput="searchProducts()">
+
+</div>
+
+
+<div class="products-grid" id="productsGrid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card" data-name="black tinta black 1">
+
+<div class="color-product shade-black">
+
+<img src="tinta-color.jpg" alt="KEUNE Tinta Color">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Black 1</h3>
+
+<p>
+Professional permanent hair color shade.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Black 1',
+'Tinta Color',
+'Professional permanent hair color.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card" data-name="dark brown tinta brown 3">
+
+<div class="color-product shade-brown">
+
+<img src="tinta-color.jpg" alt="KEUNE Tinta Color Dark Brown">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Dark Brown 3</h3>
+
+<p>
+A deep brown shade for natural-looking color.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Dark Brown 3',
+'Tinta Color',
+'A rich professional dark brown hair color.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card" data-name="medium brown tinta 4">
+
+<div class="color-product shade-lightbrown">
+
+<img src="tinta-color.jpg" alt="KEUNE Medium Brown">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Medium Brown 4</h3>
+
+<p>
+A balanced brown shade for a natural look.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Medium Brown 4',
+'Tinta Color',
+'A professional medium brown shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card" data-name="light brown tinta 5">
+
+<div class="color-product shade-lightbrown">
+
+<img src="tinta-color.jpg" alt="KEUNE Light Brown">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Light Brown 5</h3>
+
+<p>
+A lighter brown tone with natural warmth.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Light Brown 5',
+'Tinta Color',
+'A soft professional light brown shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card" data-name="dark blonde tinta 6">
+
+<div class="color-product shade-blonde">
+
+<img src="tinta-color.jpg" alt="KEUNE Dark Blonde">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Dark Blonde 6</h3>
+
+<p>
+A beautiful dark blonde shade.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Dark Blonde 6',
+'Tinta Color',
+'A professional dark blonde color.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card" data-name="medium blonde tinta 7">
+
+<div class="color-product shade-blonde">
+
+<img src="tinta-color.jpg" alt="KEUNE Medium Blonde">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Medium Blonde 7</h3>
+
+<p>
+A balanced and elegant blonde tone.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Medium Blonde 7',
+'Tinta Color',
+'A professional medium blonde shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 7 -->
+
+<div class="product-card" data-name="light blonde tinta 8">
+
+<div class="color-product shade-blonde">
+
+<img src="tinta-color.jpg" alt="KEUNE Light Blonde">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Light Blonde 8</h3>
+
+<p>
+A bright professional blonde shade.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Light Blonde 8',
+'Tinta Color',
+'A beautiful light blonde shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 8 -->
+
+<div class="product-card" data-name="blue black tinta 1.1">
+
+<div class="color-product shade-blue">
+
+<img src="tinta-color.jpg" alt="KEUNE Blue Black">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Blue Black 1.1</h3>
+
+<p>
+A deep black shade with cool blue tones.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Blue Black 1.1',
+'Tinta Color',
+'A cool and intense blue-black shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 9 -->
+
+<div class="product-card" data-name="red brown 4.6 tinta">
+
+<div class="color-product shade-red">
+
+<img src="tinta-color.jpg" alt="KEUNE Red Brown">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Medium Red Brown 4.6</h3>
+
+<p>
+A rich brown shade with red tones.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Medium Red Brown 4.6',
+'Tinta Color',
+'A professional brown shade with rich red tones.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card" data-name="violet brown tinta">
+
+<div class="color-product shade-violet">
+
+<img src="tinta-color.jpg" alt="KEUNE Violet Brown">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+TINTA COLOR
+</span>
+
+<h3>Violet Brown</h3>
+
+<p>
+A creative shade with deep violet tones.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Violet Brown',
+'Tinta Color',
+'A deep professional violet brown shade.',
+'tinta-color.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- DEVELOPER 20 -->
+
+<div class="product-card" data-name="developer 20 volume 6%">
+
+<div class="product-image">
+
+<img
+src="cream-developer.jpg"
+alt="KEUNE Cream Developer 20 Volume">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+DEVELOPER
+</span>
+
+<h3>Cream Developer 20 Vol</h3>
+
+<p>
+6% professional cream developer.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Cream Developer 20 Vol',
+'Developer',
+'Professional 6% cream developer.',
+'cream-developer.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- DEVELOPER 30 -->
+
+<div class="product-card" data-name="developer 30 volume 9%">
+
+<div class="product-image">
+
+<img
+src="cream-developer.jpg"
+alt="KEUNE Cream Developer 30 Volume">
+
+</div>
+
+<div class="product-info">
+
+<span class="product-category">
+DEVELOPER
+</span>
+
+<h3>Cream Developer 30 Vol</h3>
+
+<p>
+9% professional cream developer.
+</p>
+
+<div class="product-bottom">
+
+<span class="product-code">
+60 ML
+</span>
+
+<button class="view-btn"
+onclick="openProduct(
+'Cream Developer 30 Vol',
+'Developer',
+'Professional 9% cream developer.',
+'cream-developer.jpg'
+)">
+
+<i class="fa-solid fa-eye"></i>
+
+View
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="tinta-color.jpg"
+alt="KEUNE Tinta Color">
+
+</div>
+
+
+<div class="about-content">
+
+<span>ABOUT KEUNE COLOR</span>
+
+<h2>
+Professional Color.
+Personal Expression.
+</h2>
+
+<p>
+Explore a wide range of professional hair color
+shades, from natural tones to bold creative colors.
+</p>
+
+<p>
+Choose the shade that fits your style and create
+your own look.
+</p>
+
+<div class="stats">
+
+<div>
+
+<strong>100+</strong>
+
+<small>Color Shades</small>
+
+</div>
+
+<div>
+
+<strong>20+</strong>
+
+<small>Color Families</small>
+
+</div>
+
+<div>
+
+<strong>PRO</strong>
+
+<small>Salon Focused</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     DISTRIBUTOR
+========================= -->
+
+<section class="distributor" id="distributor">
+
+<div class="container distributor-box">
+
+<div>
+
+<span>
+BUSINESS OPPORTUNITY
+</span>
+
+<h2>
+Become a Distributor
+</h2>
+
+<p>
+Interested in working with our professional hair
+color collection? Contact us for distributor
+information and business opportunities.
+</p>
+
+</div>
+
+
+<button class="whatsapp-btn"
+onclick="openWhatsApp(
+'Hello, I am interested in becoming a KEUNE distributor. Please provide more information.'
+)">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Contact on WhatsApp
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section class="section reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CUSTOMER EXPERIENCE</span>
+
+<h2>What People Say</h2>
+
+</div>
+
+
+<div class="reviews-grid">
+
+<div class="review">
+
+<div class="review-stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+<p>
+Professional-looking results and a beautiful
+selection of shades.
+</p>
+
+<div class="review-user">
+
+<div class="user-icon">
+<i class="fa-solid fa-user"></i>
+</div>
+
+<div>
+
+<strong>Customer</strong>
+
+<small>Hair Color User</small>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="review-stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+<p>
+A great range of natural and creative
+color options.
+</p>
+
+<div class="review-user">
+
+<div class="user-icon">
+<i class="fa-solid fa-user"></i>
+</div>
+
+<div>
+
+<strong>Customer</strong>
+
+<small>Hair Color User</small>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="review-stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+<p>
+The collection offers many different shades
+for different looks.
+</p>
+
+<div class="review-user">
+
+<div class="user-icon">
+<i class="fa-solid fa-user"></i>
+</div>
+
+<div>
+
+<strong>Customer</strong>
+
+<small>Hair Color User</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>CONTACT US</span>
+
+<h2>Let's Talk About Color</h2>
+
+<p>
+For product information and distribution inquiries,
+contact us directly on WhatsApp.
+</p>
+
+</div>
+
+
+<button class="contact-btn"
+onclick="openWhatsApp(
+'Hello, I would like more information about KEUNE hair color products.'
+)">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp Us
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div class="footer-logo">
+KEUNE
+</div>
+
+<div>
+© 2026 Hair Color Collection
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     PRODUCT MODAL
+========================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close-modal"
+onclick="closeProduct()">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<div class="modal-image">
+
+<img
+id="modalImg"
+src=""
+alt="Product">
+
+</div>
+
+
+<span
+class="product-category"
+id="modalCategory">
+</span>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalDescription"></p>
+
+
+<button class="contact-btn"
+onclick="productWhatsApp()">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Ask About This Product
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<button
+class="whatsapp-float"
+onclick="openWhatsApp(
+'Hello, I would like information about KEUNE hair color products.'
+)">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</button>
+
+
+
+<script>
+
+/* =================================
+   WHATSAPP NUMBER
+   APNA NUMBER YAHAN CHANGE KARNA
+================================= */
+
+const whatsappNumber = "923000000000";
+
+
+/* =================================
+   MOBILE MENU
+================================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navMenu")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* =================================
+   SEARCH PRODUCTS
+================================= */
+
+function searchProducts(){
+
+    let input =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase();
+
+
+    let products =
+    document
+    .querySelectorAll(".product-card");
+
+
+    products.forEach(function(product){
+
+        let name =
+        product
+        .getAttribute("data-name")
+        .toLowerCase();
+
+
+        if(name.includes(input)){
+
+            product.style.display="block";
+
+        }
+
+        else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* =================================
+   OPEN PRODUCT
+================================= */
+
+let selectedProduct = "";
+
+
+function openProduct(
+name,
+category,
+description,
+image
+){
+
+    selectedProduct=name;
+
+
+    document
+    .getElementById("modalTitle")
+    .innerText=name;
+
+
+    document
+    .getElementById("modalCategory")
+    .innerText=category;
+
+
+    document
+    .getElementById("modalDescription")
+    .innerText=description;
+
+
+    document
+    .getElementById("modalImg")
+    .src=image;
+
+
+    document
+    .getElementById("modal")
+    .classList
+    .add("active");
+
+}
+
+
+/* =================================
+   CLOSE PRODUCT
+================================= */
+
+function closeProduct(){
+
+    document
+    .getElementById("modal")
+    .classList
+    .remove("active");
+
+}
+
+
+/* =================================
+   CLICK OUTSIDE MODAL
+================================= */
+
+window.onclick=function(event){
+
+    let modal =
+    document
+    .getElementById("modal");
+
+
+    if(event.target===modal){
+
+        closeProduct();
+
+    }
+
+}
+
+
+/* =================================
+   WHATSAPP
+================================= */
+
+function openWhatsApp(message){
+
+    let url =
+    "https://wa.me/"
+    +
+    whatsappNumber
+    +
+    "?text="
+    +
+    encodeURIComponent(message);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =================================
+   PRODUCT WHATSAPP
+================================= */
+
+function productWhatsApp(){
+
+    let message =
+    "Hello, I would like more information about KEUNE "
+    +
+    selectedProduct
+    +
+    ".";
+
+
+    openWhatsApp(message);
+
+}
+
+</script>
+
+</body>
+</html>
